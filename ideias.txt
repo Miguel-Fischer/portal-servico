@@ -1,0 +1,13 @@
+//Projeto: portal de serviços para panificadora La Bambinela.
+
+Público alvo: clientes da Panificadora La Bambinela.
+
+Problema: Os clientes precisam entrar em contato para consultar produtos, fazer encomendas e obter informações, tornando o atendimento mais demorado.
+
+serviços oferecidos:
+1. Consulta ao cardapio.
+2. Encomendas de produtos.
+3. Solicitação de coffe break ou orçamentos.
+4. Acompanhamento de pedidos.
+5. Informações sobre horários e localização.
+
