@@ -56,11 +56,28 @@
         <a href="contato.html">Tirar dúvidas</a>
       </article>
     </section>
+
+    <section class="consulta-servico">
+      <h2>Consulte um serviço</h2>
+
+      <label for="servico">Escolha um serviço:</label>
+      <select id="servico">
+        <option value="">Selecione...</option>
+        <option value="cardapio">Cardápio</option>
+        <option value="encomenda">Encomenda</option>
+        <option value="coffee-break">Coffee break</option>
+      </select>
+
+      <button id="btnConsultar" type="button">Consultar orientação</button>
+
+      <p id="resultado" aria-live="polite"></p>
+    </section>
   </main>
 
   <footer>
     <p>La Bambinela — Panificadora | Projeto acadêmico, Programação Web</p>
   </footer>
 
+  <script src="js/script.js"></script>
 </body>
 </html>
