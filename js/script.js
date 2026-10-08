@@ -17,3 +17,36 @@ botaoConsultar.addEventListener("click", () => {
     resultado.textContent = "Serviço não identificado.";
   }
 });
+
+// Aula 09 - array de serviços do Portal
+const servicos = [
+  {
+    nome: "Cardápio",
+    descricao: "Consulte pães, doces e salgados disponíveis antes de fazer seu pedido."
+  },
+  {
+    nome: "Encomendas",
+    descricao: "Encomende bolos, salgados e pães especiais com antecedência e retire no horário combinado."
+  },
+  {
+    nome: "Coffee break",
+    descricao: "Solicite um orçamento personalizado de coffee break para eventos, reuniões e festas."
+  },
+  {
+    nome: "Acompanhamento de pedidos",
+    descricao: "Saiba o status e o prazo de entrega da sua encomenda."
+  },
+  {
+    nome: "Horários e localização",
+    descricao: "Segunda a sábado, das 6h às 19h. Domingo, das 6h às 12h. Rua das Palmeiras, 245, centro."
+  }
+];
+
+// Teste temporário (Passo 3 e 4) - pode apagar depois de conferir no Console
+console.table(servicos);
+console.log(servicos[0].nome);
+console.log(servicos[1].descricao);
+
+servicos.forEach((servico) => {
+  console.log(servico.nome);
+});
