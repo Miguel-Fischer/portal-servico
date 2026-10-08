@@ -42,11 +42,25 @@ const servicos = [
   }
 ];
 
-// Teste temporário (Passo 3 e 4) - pode apagar depois de conferir no Console
-console.table(servicos);
-console.log(servicos[0].nome);
-console.log(servicos[1].descricao);
+// Aula 10 - monta os cards dinamicamente no DOM
+const listaServicos = document.querySelector("#listaServicos");
 
-servicos.forEach((servico) => {
-  console.log(servico.nome);
-});
+function renderizarServicos() {
+  listaServicos.innerHTML = "";
+
+  servicos.forEach((servico) => {
+    const card = document.createElement("article");
+    card.classList.add("card-servico");
+
+    const titulo = document.createElement("h3");
+    titulo.textContent = servico.nome;
+
+    const descricao = document.createElement("p");
+    descricao.textContent = servico.descricao;
+
+    card.append(titulo, descricao);
+    listaServicos.appendChild(card);
+  });
+}
+
+renderizarServicos();

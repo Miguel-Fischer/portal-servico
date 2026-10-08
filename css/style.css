@@ -31,7 +31,6 @@ nav {
   display: flex;
   justify-content: center;
   gap: 24px;
-  flex-direction: row;
 }
 
 nav a {
@@ -129,9 +128,16 @@ footer {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  align-items: flex-start;
 }
 
 .container-servicos article {
   flex: 1 1 250px;
+}
+
+/* Aula 10 - cards do catálogo dinâmico */
+.card-servico {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
