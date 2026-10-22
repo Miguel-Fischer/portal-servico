@@ -75,6 +75,17 @@
 
     <section>
       <h2>Catálogo de serviços</h2>
+
+      <label for="filtroCategoria">Filtrar serviços por categoria:</label>
+      <select id="filtroCategoria">
+        <option value="todos">Todos os serviços</option>
+        <option value="produtos">Produtos</option>
+        <option value="eventos">Eventos</option>
+        <option value="atendimento">Atendimento</option>
+      </select>
+
+      <p id="mensagemFiltro" aria-live="polite"></p>
+
       <div id="listaServicos"></div>
     </section>
   </main>
