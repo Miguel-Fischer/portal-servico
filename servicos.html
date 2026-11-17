@@ -17,7 +17,7 @@
 
   <nav>
     <a href="index.html">Início</a>
-    <a href="servicos.html">Serviços</a>
+    <a href="servicos.html" aria-current="page">Serviços</a>
     <a href="contato.html">Contato</a>
   </nav>
 
@@ -73,6 +73,22 @@
       <p id="resultado" aria-live="polite"></p>
     </section>
 
+    <section class="consulta-cep" aria-labelledby="tituloCep">
+      <span class="eyebrow">Facilidade para sua encomenda</span>
+      <h2 id="tituloCep">Encontre seu endereço pelo CEP</h2>
+      <p>Consulte o endereço para combinar a entrega ou retirada. Informe os 8 números do CEP.</p>
+      <form id="formCep" novalidate>
+        <label for="cep">CEP</label>
+        <div class="cep-controles">
+          <input id="cep" name="cep" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="9" placeholder="00000-000" aria-describedby="ajudaCep statusCep">
+          <button id="btnBuscarCep" type="submit">Buscar endereço</button>
+        </div>
+        <small id="ajudaCep" class="texto-ajuda">Você pode digitar com ou sem hífen.</small>
+      </form>
+      <p id="statusCep" class="status" role="status" aria-live="polite"></p>
+      <div id="resultadoCep" class="resultado-cep" aria-live="polite"></div>
+    </section>
+
     <section>
       <h2>Catálogo de serviços</h2>
 
@@ -95,5 +111,6 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/cep.js"></script>
 </body>
 </html>

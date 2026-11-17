@@ -36,11 +36,17 @@ botaoFavorito.addEventListener("click", () => {
   }
 
   localStorage.setItem("servicoFavorito", servico);
-  mensagemFavorito.textContent = `Favorito salvo: ${servico}`;
+  const nomeServico = campoFavorito.options[campoFavorito.selectedIndex].text;
+  mensagemFavorito.textContent = `Favorito salvo: ${nomeServico}.`;
 });
 
-const favoritoSalvo = localStorage.getItem("servicoFavorito");
-if (favoritoSalvo) {
-  campoFavorito.value = favoritoSalvo;
-  mensagemFavorito.textContent = `Seu serviço favorito é: ${favoritoSalvo}`;
+try {
+  const favoritoSalvo = localStorage.getItem("servicoFavorito");
+  if (favoritoSalvo && campoFavorito.querySelector(`option[value="${favoritoSalvo}"]`)) {
+    campoFavorito.value = favoritoSalvo;
+    mensagemFavorito.textContent = `Seu serviço favorito é: ${campoFavorito.options[campoFavorito.selectedIndex].text}.`;
+  }
+} catch (erro) {
+  mensagemFavorito.textContent = "O armazenamento de preferências não está disponível neste navegador.";
+  console.error("Não foi possível ler a preferência:", erro);
 }
